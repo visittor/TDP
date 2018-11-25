@@ -1,0 +1,35 @@
+\section{Vision based navigation system}
+\paragraph{}
+To interact with objects in the soccer field, the robot shall be able to distinguish and identify many types of objects in the playing environment. Currently the ball and field lines can be detected, other useful information associated with the objects such as position and speed shall be determined. Once the information is determined, the robot can compute an appropriate action for the soccer game. Following subsections describe how the robot recognizes objects in the field and compute the position of objects. Moreover, information outside the soccer field can be useful since there is no landmark for robot to recognize which side is friendly territory. We found a method which have a potential to detect some objects outside the field.
+
+	\subsection{Position Determination}
+	\label{threeToTwo}
+	\paragraph{}
+	Three dimensional position of an object can be estimated when the object is identified in an image. The necessary information consists of a selected pixel on image coordinate (u, v) that belong to the object, forward kinematic from a robot base to a camera and camera's properties. Coordinate of interested pixels will be projected to a plane (floor) using perspective transform then three dimensional position which respect to robot base will be calculated using forward kinematic.
+	
+	\subsection{Color Segmentation}
+	\label{colorSeg}
+	\paragraph{}
+	Each pixels in an image will be classified into eight colors (green, black, orange, blue, yellow, magenta, cyan and white) base on their pixel value. Then, apply watershed segmentation to get a better result on color segmentation.
+	\paragraph{}
+	We used HSV color system for classify a color of each pixels.The white color pixels would classified when the value of Saturation (S) is lower than the threshold, while the Value (V) is higher than the threshold. Black color pixels can also be classified when both Saturation (S) and Value (V) is lower than each threshold. For other colors, their Hue (H), Saturation (S) (and also Value (V)) on the appropriate certain ranges could be used for classification.
+	
+	\subsection{Field Boundary Detection}
+	\paragraph{}
+	An information about field boundary is importance for our soccer robot. This information can be used later on other image processing algorithm. We detect a field boundary by scanning an image from top to bottom and find a first green pixel for each columns of an image. Convex hull from those points we get by scanning an image will be our field boundary. 
+	
+	\subsection{Ball Detection}
+	\paragraph{}
+	From the competition in Robocup asia pacific 2017 [2] we have tried to used HAAR feature for ball detection. A lot of false positive detections have been occurred, so we have to remove out the un-related background by ignore every object outside a field boundary. The approach for ball detection has been slightly changed as followed.
+	\begin{enumerate}
+		\item As the ball contains white component mostly, the white color segmentation from \ref{colorSeg} has been used. Ramer–Douglas–Peucker algorithm [3] was used to classify how well the circle shape the object is. And then the region of the interests (ROI) of the detected objects would be used for consideration.
+		
+		\item The ROI(s) from previous step were checked with well-trained HAAR cascade classifier (using adaboost) [4][2].  Because we have limited the ROI(s), the scanning is faster than before. 
+	\end{enumerate}
+	
+	\subsection{Line Detection}
+	\paragraph{}
+	Line information should bee useful for localization in future work. To detecting a line, we scan an image inside a field boundary from top to bottom every 8 image columns and find points where color is change from white to green. Three dimensional coordinate of those point can be obtained as we mention in \ref{threeToTwo}. Those points on a field line can be treat like a point cloud from laser scanner and be used by particle filter.
+	
+	
+	

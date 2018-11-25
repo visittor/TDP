@@ -1,0 +1,131 @@
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/Debian) (preloaded format=xelatex 2018.10.20)  25 NOV 2018 14:13
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count87
+)
+(/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count88
+\cp@tempcnt=\count89
+)
+(/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip43
+\@affilsep=\skip44
+\c@Maxaffil=\count90
+\c@authors=\count91
+\c@affil=\count92
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count93
+\float@exts=\toks14
+\float@box=\box26
+\@float@everytoks=\toks15
+\@floatcapt=\box27
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: xetex.def on input line 95.
+
+(/usr/share/texlive/texmf-dist/tex/xelatex/xetex-def/xetex.def
+File: xetex.def 2015/09/11 v4.06 LaTeX color/graphics driver for XeTeX (TeX Liv
+e/RRM/JK)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(./thesis.aux)
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+Missing character: There is no ’ in font cmr12!
+
+Overfull \hbox (28.46896pt too wide) in paragraph at lines 28--30
+\OT1/cmr/m/n/9 hu-manoid robots of the Hanuman-KMUTT team for XXXXXXXXXXX.
+ []
+
+(./section1.tex
+Missing character: There is no ã in font cmr10!
+) (./section2.tex [1
+
+]
+File: image/humanoid.png Graphic file (type QTm)
+ <use  "image/humanoid.png" >
+File: image/sysDiagram.png Graphic file (type QTm)
+
+<use  "image/sysDiagram.png" > [2]
+Missing character: There is no ω in font cmr10!
+) (./section3.tex [3]
+Missing character: There is no – in font cmr10!
+Missing character: There is no – in font cmr10!
+ [4]) (./section4.tex
+Missing character: There is no ’ in font cmr10!
+File: image/stateMachine.png Graphic file (type QTm)
+
+<use  "image/stateMachine.png" >) [5] [6] (./thesis.aux) ) 
+Here is how much of TeX's memory you used:
+ 1154 strings out of 493638
+ 14536 string characters out of 6146795
+ 168095 words of memory out of 5000000
+ 4575 multiletter control sequences out of 15000+600000
+ 6371 words of font info for 23 fonts, out of 8000000 for 9000
+ 1328 hyphenation exceptions out of 8191
+ 27i,7n,19p,1078b,240s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on thesis.pdf (6 pages).
