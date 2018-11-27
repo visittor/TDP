@@ -31,5 +31,13 @@ To interact with objects in the soccer field, the robot shall be able to disting
 	\paragraph{}
 	Line information should bee useful for localization in future work. To detecting a line, we scan an image inside a field boundary from top to bottom every 8 image columns and find points where color is change from white to green. Three dimensional coordinate of those point can be obtained as we mention in \ref{threeToTwo}. Those points on a field line can be treat like a point cloud from laser scanner and be used by particle filter.
 	
+	\subsection{Landmark Detection}
+	\paragraph{}
+	ในการตำแหน่งของหุ่นยนต์ในสนามที่สมมาตรทั้งสองข้างนั้นในบางครั้งในการคำนวณตำแหน่งของหุ่นยนต์โดยกำหนดตัวแปรตั้งต้นแค่ครั้งแรกในการเริ่มเกมด้วยปัจจัยหลายๆอย่างเช่น การล้มของหุ่นยนต์ อาจทำให้อัลกอริทึ่มประมาณค่าตำแหน่งผิดพลาดได้เนื่องการจากหลงทิศทาง ดังนั้นเราจึงเสนอวิธีการ detect หา landmark ที่อยู่รอบๆสนามเพื่อเป็นสิ่งที่ช่วยในการยืนยันทิศทางที่ถูกต้องแก่ตัวหุ่นยนต์ได้
+	\paragraph{}
+	วิธีการ detect landmark นั้นเราใช้วิธีการ deep learning อัลกอริทึ่มที่มีชื่อว่า Fully-convolution Siamese network ถูกนำเสนอใน \ref{paperSiameseFC} ซึ่งวิธีการนี้ถูกใช้สำหรับการ track วัตถุที่มีการเคลื่อนที่โดยพลการ(arbitrary object tracking) และสามารถ track วัตถุที่ไม่เคยเห็นมาก่อนได้ โดยอินพุตของโมเดลนี้จะมี exemplar image จากเฟรมแรก และ Search image จากเฟรมต่อไปซึ่งจะถูก initial ในเฟรมแรกของวิดีโอและโมเดลจะทำการทำนายตำแหน่งของวัตถุที่ถูกต้องในเฟรมต่อไปได้โดยโมเดลจะให้เอาท์พุตออกมาเป็น score map ซึ่งจะบอกถึงความน่าจะเป็นของตำแหน่งที่ถูกต้องของวัตถุใน Search image ได้
+	\paragraph{}
+	เราทำการประยุกต์ใช้โมเดลนี้โดยการใช้ exemplar image เป็นภาพของวัตถุที่เราให้เป็น landmark และใช้ Search image เป็นภาพทั้งภาพในทุกๆเฟรมของวิดีโอโดยปกติแล้ว score map ที่ได้จากโมเดลนี้จะมีค่าความน่าจะเป็นของจุดที่คิดว่าเป็นตำแหน่งที่ถูกต้องของวัตถุสุงอยู่ค่าหนึ่งและเมื่อไม่พบวัตถุที่มีความเหมือนกับ exemplar image ค่าที่สุงที่สุดของ score map จะมีค่าน้อยเราจึงทำการใช้ค่า threshold เป็น filter เพื่อบ่งบอกว่ามีวัตถุที่เป็น landmark อยู่ในภาพหรือไม่และด้วยวิธีการเดียวกันนี้ทำให้เราสามารถ detect เสาของ goal เพื่อช่วยให้การหาตำแหน่งgoal ได้อีก 
+	
 	
 	
